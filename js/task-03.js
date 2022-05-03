@@ -21,4 +21,6 @@ const imageEl = images.map(el => {
   galleryEl.append(listEl);
 })
 
-
+galleryEl.style.cssText = `display: grid;
+  grid-template-columns: 300px 300px 300px;
+`
