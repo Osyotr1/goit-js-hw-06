@@ -5,8 +5,8 @@ console.log(defaultLength);
 
 inputEl.addEventListener('blur', colorChange);
 
-function colorChange(value) {
-    if (Number(inputEl.value.length) === Number(defaultLength)) {
+function colorChange() {
+    if (+(inputEl.value.length) === +(defaultLength)) {
         inputEl.classList.remove('invalid');
         inputEl.classList.add('valid');
     } else {
