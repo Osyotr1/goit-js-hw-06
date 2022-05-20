@@ -1,5 +1,5 @@
-const inputEl = document.querySelector('#font-size-control');
-const spanEl = document.querySelector('#text');
-inputEl.addEventListener("input", (e) => {
-  spanEl.style.fontSize = e.currentTarget.value + "px";
+const slider = document.querySelector('#font-size-control');
+const textEl = document.querySelector('#text');
+slider.addEventListener("input", (e) => {
+  textEl.style.fontSize = e.currentTarget.value + "px";
 });

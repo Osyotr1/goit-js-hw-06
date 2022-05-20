@@ -5,7 +5,7 @@ function getRandomHexColor() {
 const input = document.querySelector('input');
 const createBtn = document.querySelector('[data-create]');
 const destroyBtn = document.querySelector('[data-destroy]');
-const divBoxes = document.querySelector('#boxes');
+const boxesList = document.querySelector('#boxes');
 
 const inputValue = () => Number(input.value);
 
@@ -30,11 +30,11 @@ const createBoxes = () => {
     
     
   }
-  divBoxes.append(...boxes);
+  boxesList.append(...boxes);
 }
 
 const removeBoxes = () => {
-  divBoxes.innerHTML = '';
+  boxesList.innerHTML = '';
 }
 
 
