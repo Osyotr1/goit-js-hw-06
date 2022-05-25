@@ -16,10 +16,9 @@ const images = [
 const galleryEl = document.querySelector('ul.gallery');
 
 const imageEl = images.map(el => {
-  const listEl = document.createElement('li');
-  listEl.insertAdjacentHTML("afterbegin", `<img src="${el.url}" alt="${el.alt}" width="200" height="100">`);
-  galleryEl.append(listEl);
-})
+  return`<li><img src="${el.url}" alt="${el.alt}" width="200" height="100">`
+}).join('');
+galleryEl.insertAdjacentHTML('afterbegin', imageEl);
 
 galleryEl.style.cssText = `display: grid;
   grid-template-columns: 300px 300px 300px;
