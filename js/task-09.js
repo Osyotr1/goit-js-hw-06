@@ -3,7 +3,7 @@ function getRandomHexColor() {
 }
 
 
-const body = document.querySelector('.widget');
+const body = document.querySelector('body');
 
 const colorChangeBtn = document.querySelector('button.change-color');
 

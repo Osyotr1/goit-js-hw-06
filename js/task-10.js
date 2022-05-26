@@ -11,15 +11,15 @@ const boxesList = document.querySelector('#boxes');
 function getInputValue() {
   const input = document.querySelector('input').value;
   createBoxes(input);
+};
+
+function createBoxes(amount) {
+  const boxes = [];
 
 
-  function createBoxes(amount) {
-    const boxes = [];
-
-
-    for (let i = 1; i <= amount; i += 1) {
+  for (let i = 1; i <= amount; i += 1) {
     
-      const box = document.createElement('div');
+    const box = document.createElement('div');
 
       box.style.backgroundColor = getRandomHexColor();
       box.style.margin = '10px';
@@ -29,10 +29,9 @@ function getInputValue() {
       box.style.borderRadius = '5%';
       boxes.push(box);
       
-    }
-    boxesList.append(...boxes);
   }
-};
+  boxesList.append(...boxes);
+}
 
 const removeBoxes = () => {
   boxesList.innerHTML = '';
